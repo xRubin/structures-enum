@@ -32,11 +32,11 @@ abstract class Enum implements EnumInterface
     }
 
     /**
-     * @param string $value
+     * @param mixed $value
      * @return static
      * @throws \ReflectionException
      */
-    public static function fromString(string $value)
+    public static function fromValue($value)
     {
         return new static($value);
     }
@@ -51,9 +51,9 @@ abstract class Enum implements EnumInterface
     }
 
     /**
-     * @return string
+     * @return mixed
      */
-    public function getValue(): string
+    public function getValue()
     {
         return $this->value;
     }

@@ -5,10 +5,10 @@ namespace rubin\structures\enum;
 interface EnumInterface extends \JsonSerializable
 {
     /**
-     * @param string $value
+     * @param mixed $value
      * @return static
      */
-    public static function fromString(string $value);
+    public static function fromValue($value);
 
     /**
      * @param EnumInterface $enum
@@ -17,7 +17,7 @@ interface EnumInterface extends \JsonSerializable
     public function equalTo(EnumInterface $enum): bool;
 
     /**
-     * @return string
+     * @return mixed
      */
-    public function getValue(): string;
+    public function getValue();
 }
