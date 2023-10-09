@@ -8,7 +8,7 @@ interface EnumInterface extends \JsonSerializable
      * @param mixed $value
      * @return static
      */
-    public static function fromValue($value);
+    public static function fromValue($value): EnumInterface;
 
     /**
      * @param EnumInterface $enum

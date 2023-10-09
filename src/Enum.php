@@ -69,6 +69,7 @@ abstract class Enum implements EnumInterface
     /**
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
         return $this->getValue();
