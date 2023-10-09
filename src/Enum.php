@@ -36,7 +36,7 @@ abstract class Enum implements EnumInterface
      * @return static
      * @throws \ReflectionException
      */
-    public static function fromValue($value)
+    public static function fromValue($value): EnumInterface
     {
         return new static($value);
     }
